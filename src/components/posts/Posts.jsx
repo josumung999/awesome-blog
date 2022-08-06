@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, List } from 'reactstrap'
 import data from '../../data/posts.json';
+import PostItem from './PostItem';
 
 const Posts = () => {
   return (
@@ -8,9 +9,7 @@ const Posts = () => {
       Posts
       <List>
         {data.posts.map((post) => (
-          <li>
-            {post.title}
-          </li>
+          <PostItem post={post} key={post.id} />
         ))}
       </List>
     </Container>
