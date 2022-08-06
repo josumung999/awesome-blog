@@ -1,8 +1,11 @@
 import React from 'react'
+import { Container } from 'reactstrap'
 
 const Posts = () => {
   return (
-    <div>Posts</div>
+    <Container style={{ paddingTop: "70px" }}>
+      Posts
+    </Container>
   )
 }
 
