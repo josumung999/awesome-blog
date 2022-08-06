@@ -1,14 +1,20 @@
-import './App.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from "reactstrap"
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Posts from './components/posts/Posts';
+import Post from './components/post/Post';
 
 function App() {
   return (
-    <div className="App">
-      <Button color='danger'>Danger !</Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <Posts /> } />
+        <Route path='post/:id' element={ <Post /> } />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
